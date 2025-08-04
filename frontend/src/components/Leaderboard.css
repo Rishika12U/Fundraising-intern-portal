@@ -1,0 +1,111 @@
+/* Leaderboard Styles */
+.leaderboard-card {
+  width: 100%;
+  max-width: 900px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin: 30px auto;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.leaderboard-card h2 {
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.leaderboard-table thead {
+  background: linear-gradient(to right, #3a7bd5, #00d2ff);
+  color: white;
+}
+
+.leaderboard-table th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.leaderboard-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #4a5568;
+}
+
+.leaderboard-table tr:last-child td {
+  border-bottom: none;
+}
+
+.leaderboard-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.leaderboard-table td:first-child {
+  font-weight: bold;
+  color: #3a7bd5;
+}
+
+.leaderboard-table td:nth-child(4) {
+  font-weight: 600;
+  color: #2ecc71;
+}
+
+/* Rank colors for top 3 */
+.leaderboard-table tr:nth-child(1) td:first-child {
+  color: #f1c40f;
+}
+.leaderboard-table tr:nth-child(2) td:first-child {
+  color: #95a5a6;
+}
+.leaderboard-table tr:nth-child(3) td:first-child {
+  color: #e67e22;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .leaderboard-card {
+    padding: 30px;
+    margin: 20px;
+  }
+  
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .leaderboard-card {
+    padding: 20px;
+    border-radius: 0;
+    margin: 0;
+  }
+  
+  .leaderboard-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .leaderboard-card h2 {
+    font-size: 26px;
+  }
+}
